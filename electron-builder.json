@@ -1,0 +1,16 @@
+{
+  "appId": "com.estanho.link-caster",
+  "files": ["dist-electron", "dist-react"],
+  "extraResources": ["dist-electron/preload.cjs"],
+  "icon": "./icon/desktopIcon.png",
+  "mac": {
+    "target": ["dmg"]
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "category": "Utility"
+  },
+  "win": {
+    "target": ["portable", "nsis"]
+  }
+}
