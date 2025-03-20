@@ -1,5 +1,5 @@
 {
-  "name": "link-caster",
+  "name": "electron-base",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +20,7 @@
     "@tailwindcss/vite": "^4.0.14",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "discord.js": "^14.18.0",
     "lucide-react": "^0.482.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

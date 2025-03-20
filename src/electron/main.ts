@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import { isDev } from "./utils.js";
 import path from "path";
-import { discordMain } from "./discordManager.js";
+import { baseMain } from "./manager.js";
 import { getPreloadPath } from "./pathResolver.js";
 
 app.on("ready", () => {
@@ -10,6 +10,7 @@ app.on("ready", () => {
       preload: getPreloadPath(),
     },
   });
+
   if (isDev()) {
     mainWindow.loadURL("http://localhost:5123");
   } else {
@@ -18,7 +19,7 @@ app.on("ready", () => {
     );
   }
 
-  discordMain(mainWindow);
+  baseMain(mainWindow);
   ipcMain.handle("get-static-data", () => {
     return "Hello from handle";
   });
